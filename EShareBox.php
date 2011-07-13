@@ -67,7 +67,7 @@ class EShareBox extends CWidget
 		'twitter' => array(
 			'url' => 'http://twitter.com/home?status={title}+ -- +{url}',
 			'title' => 'Tweet This!',
-			'name' => 'Tweeter',
+			'name' => 'Twitter',
 		),
 		'google-buzz' => array(
 			'url' => 'http://www.google.com/buzz/post?url={url}',
