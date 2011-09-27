@@ -3,17 +3,17 @@
 /**
  * ShareBox
  * Create a list of social networks that a user may share the page with.
- * 
+ *
  * CSS base and 48px icons from Beautiful Social Bookmarking Widget by Harish.
  * http://www.way2blogging.org/2011/03/add-beautiful-social-bookmarking-widget.html
- * 
+ *
  * 16, 24 and 32 px icons from IconDock
  * http://icondock.com/free/vector-social-media-icons
- * 
+ *
  * @copyright © Digitick <www.digitick.net> 2011
  * @license Public Domain
  * @author Ianaré Sévi
- * 
+ *
  * Note: the company logos in the icons are copyright of their respective owners.
  */
 
@@ -109,13 +109,13 @@ class EShareBox extends CWidget
 			'title' => 'Bookmark on Newsvine',
 			'name' => 'Newsvine',
 		),
-		/*
-		'email' => array(
-			'url' => 'http://mysite.com/sendEmail?url={url}&title={title}',
-			'title' => 'Email this',
-			'name' => 'E-Mail',
-		),
-		 */
+			/*
+			  'email' => array(
+			  'url' => 'http://mysite.com/sendEmail?url={url}&title={title}',
+			  'title' => 'Email this',
+			  'name' => 'E-Mail',
+			  ),
+			 */
 	);
 	/**
 	 * @var array Default html options. Will be merged with $htmlOptions provided by user.
@@ -142,22 +142,21 @@ class EShareBox extends CWidget
 				}
 			}
 		}
-		foreach ($this->exclude as $share) {
+		foreach ((array) $this->exclude as $share) {
 			unset($this->shareDefinitions[$share]);
 		}
 		$this->ulHtmlOptions = array_merge($this->defaultUlHtmlOptions, $this->ulHtmlOptions);
+		Yii::app()->clientScript->registerCss('sharebox-image-size-rss', 'ul.' . $this->ulHtmlOptions['class'] . " li a {width:{$this->iconSize}px; height:{$this->iconSize}px;}"
+		);
 	}
 
 	public function run()
 	{
-		echo CHtml::tag('style', array('type' => 'text/css'), 'ul.' . $this->ulHtmlOptions['class'] . " li a {width:{$this->iconSize}px; height:{$this->iconSize}px;"
-		);
 		echo CHtml::openTag('ul', $this->ulHtmlOptions);
-
 		foreach ($this->shareDefinitions as $name => $def) {
 			$linkText = CHtml::tag('strong', array(), $def['name']);
-			$url = strtr($def['url'], array('{url}' => $this->url, '{title}' => $this->title));
-			$link = CHtml::link($linkText, $url, array('rel' => 'nofollow', 'target' => '_blank', 'title' => $def['title']));
+			$url = strtr($def['url'], array('{url}' => urlencode($this->url), '{title}' => urlencode($this->title)));
+			$link = CHtml::link($linkText, htmlentities($url), array('rel' => 'nofollow', 'target' => '_blank', 'title' => $def['title']));
 
 			$bgImage = "{$this->iconPath}/{$this->iconSize}px/{$name}.png";
 			$this->liHtmlOptions['style'] = "background-image:url({$bgImage});";
