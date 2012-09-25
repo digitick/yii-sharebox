@@ -65,7 +65,7 @@ class EShareBox extends CWidget
 			'name' => 'Facebook'
 		),
 		'twitter' => array(
-			'url' => 'http://twitter.com/home?status={title}+ -- +{url}',
+			'url' => 'http://twitter.com/home?status={title}++--++{url}',
 			'title' => 'Tweet This!',
 			'name' => 'Twitter',
 		),
@@ -123,7 +123,7 @@ class EShareBox extends CWidget
 	 */
 	protected $defaultUlHtmlOptions = array(
 		"class" => "way2blogging-social",
-		"id" => "way2blogging-cssanime",
+		"id" => "way2blogging_cssanime",
 	);
 
 	public function init()
@@ -157,7 +157,7 @@ class EShareBox extends CWidget
 		foreach ($this->shareDefinitions as $name => $def) {
 			$linkText = CHtml::tag('strong', array(), $def['name']);
 			$url = strtr($def['url'], array('{url}' => urlencode($this->url), '{title}' => urlencode($this->title)));
-			$link = CHtml::link($linkText, htmlentities($url), array('rel' => 'nofollow', 'target' => '_blank', 'title' => $def['title']));
+			$link = CHtml::link($linkText, $url, array('rel' => 'nofollow', 'target' => '_blank', 'title' => $def['title']));
 
 			$bgImage = "{$this->iconPath}/{$this->iconSize}px/{$name}.png";
 			$this->liHtmlOptions['style'] = "background-image:url({$bgImage});";

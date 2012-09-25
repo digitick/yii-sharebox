@@ -32,22 +32,22 @@ ul.way2blogging-social li a strong {
 	border-radius:3px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-#way2blogging-cssanime:hover li { opacity:0.4; }
-#way2blogging-cssanime li {
+#way2blogging_cssanime:hover li { opacity:0.4; }
+#way2blogging_cssanime li {
 	-webkit-transition-property: opacity;
 	-webkit-transition-duration: 500ms;
 	-moz-transition-property: opacity;
 	-moz-transition-duration: 500ms;
 }
-#way2blogging-cssanime li a strong {
+#way2blogging_cssanime li a strong {
 	opacity:0;
 	-webkit-transition-property: opacity, top;
 	-webkit-transition-duration: 300ms;
 	-moz-transition-property: opacity, top;
 	-moz-transition-duration: 300ms;
 }
-#way2blogging-cssanime li:hover {
+#way2blogging_cssanime li:hover {
 	opacity:1; }
-#way2blogging-cssanime li:hover a strong {
+#way2blogging_cssanime li:hover a strong {
 	opacity:1; top:-10px; }
 
