@@ -70,8 +70,7 @@ class EShareBox extends CWidget
 			'name' => 'Twitter',
 		),
 		'google-plus' => array(
-			'url' => 'https://m.google.com/app/plus/x/?v=compose&content={title}+--+{url}&hideloc=1&group=b0',
-			//'url' => 'https://plusone.google.com/_/+1/confirm?url={url}',
+			'url' => 'https://plus.google.com/share?url={url}',
 			'title' => 'Share on Google+',
 			'name' => 'Google+'
 		),
