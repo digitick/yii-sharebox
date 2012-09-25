@@ -69,10 +69,11 @@ class EShareBox extends CWidget
 			'title' => 'Tweet This!',
 			'name' => 'Twitter',
 		),
-		'google-buzz' => array(
-			'url' => 'http://www.google.com/buzz/post?url={url}',
-			'title' => 'Post on GoogleBuzz',
-			'name' => 'Google Buzz'
+		'google-plus' => array(
+			'url' => 'https://m.google.com/app/plus/x/?v=compose&content={title}+--+{url}&hideloc=1&group=b0',
+			//'url' => 'https://plusone.google.com/_/+1/confirm?url={url}',
+			'title' => 'Share on Google+',
+			'name' => 'Google+'
 		),
 		'stumbleupon' => array(
 			'url' => 'http://www.stumbleupon.com/submit?url={url}&title={title}',
