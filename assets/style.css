@@ -8,6 +8,10 @@ ul.way2blogging-social li {
 	display:inline;
 	float:left;
 	background-repeat:no-repeat;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 500ms;
 }
 ul.way2blogging-social li a {
 	display:block;
@@ -31,23 +35,19 @@ ul.way2blogging-social li a strong {
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 	border-radius:3px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-#way2blogging_cssanime:hover li { opacity:0.4; }
-#way2blogging_cssanime li {
-	-webkit-transition-property: opacity;
-	-webkit-transition-duration: 500ms;
-	-moz-transition-property: opacity;
-	-moz-transition-duration: 500ms;
-}
-#way2blogging_cssanime li a strong {
 	opacity:0;
 	-webkit-transition-property: opacity, top;
 	-webkit-transition-duration: 300ms;
 	-moz-transition-property: opacity, top;
 	-moz-transition-duration: 300ms;
 }
-#way2blogging_cssanime li:hover {
-	opacity:1; }
-#way2blogging_cssanime li:hover a strong {
-	opacity:1; top:-10px; }
-
+ul.way2blogging-social:hover li {
+	opacity:0.4;
+}
+ul.way2blogging-social li:hover {
+	opacity:1;
+}
+ul.way2blogging-social li:hover a strong {
+	opacity:1;
+	top:-10px;
+}

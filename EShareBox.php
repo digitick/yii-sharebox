@@ -10,7 +10,7 @@
  * 16, 24 and 32 px icons from IconDock
  * http://icondock.com/free/vector-social-media-icons
  *
- * @copyright © Digitick <www.digitick.net> 2011
+ * @copyright © Digitick <www.digitick.net> 2011-2012
  * @license Public Domain
  * @author Ianaré Sévi
  *
@@ -35,7 +35,7 @@ class EShareBox extends CWidget
 	 */
 	public $iconSize = 24;
 	/**
-	 * @var string custom icon path
+	 * @var string custom icon path.
 	 */
 	public $iconPath;
 	/**
@@ -48,15 +48,15 @@ class EShareBox extends CWidget
 	 */
 	public $exclude = array();
 	/**
-	 * @var array Html options for UL element
+	 * @var array Html options for UL element.
 	 */
 	public $ulHtmlOptions = array();
 	/**
-	 * @var array Html options for LI elements
+	 * @var array Html options for LI elements.
 	 */
 	public $liHtmlOptions = array();
 	/**
-	 * @var array Definitions for sharing services .
+	 * @var array Definitions for sharing services.
 	 */
 	protected $shareDefinitions = array(
 		'facebook' => array(
@@ -121,8 +121,7 @@ class EShareBox extends CWidget
 	 * @var array Default html options. Will be merged with $htmlOptions provided by user.
 	 */
 	protected $defaultUlHtmlOptions = array(
-		"class" => "way2blogging-social",
-		"id" => "way2blogging_cssanime",
+		'class' => 'way2blogging-social',
 	);
 
 	public function init()
