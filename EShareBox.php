@@ -60,18 +60,18 @@ class EShareBox extends CWidget
 	 */
 	protected $shareDefinitions = array(
 		'facebook' => array(
-			'url' => 'https://www.facebook.com/share.php?u={url}&t={title}',
+			'url' => 'https://www.facebook.com/sharer.php?u={url}&t={title}',
 			'title' => 'Share this on Facebook',
 			'name' => 'Facebook'
 		),
 		'twitter' => array(
-			'url' => 'http://twitter.com/home?status={title}++--++{url}',
+			'url' => 'http://twitter.com/intent/tweet?url={url}&text={title}',
 			'title' => 'Tweet This!',
 			'name' => 'Twitter',
 		),
 		'google-plus' => array(
 			'url' => 'https://plus.google.com/share?url={url}',
-			'title' => 'Share on Google+',
+			'title' => 'Share this on Google+',
 			'name' => 'Google+'
 		),
 		'stumbleupon' => array(
