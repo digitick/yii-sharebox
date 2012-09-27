@@ -31,6 +31,10 @@ class EShareBox extends CWidget
 	 */
 	public $title;
 	/**
+	 * @var boolean whether to animate the links. 
+	 */
+	public $animate = true;
+	/**
 	 * @var integer Size for share icons.
 	 */
 	public $iconSize = 24;
@@ -144,9 +148,12 @@ class EShareBox extends CWidget
 		foreach ((array) $this->exclude as $share) {
 			unset($this->shareDefinitions[$share]);
 		}
+		if($this->animate) {
+			$this->defaultUlHtmlOptions['class'] = $this->defaultUlHtmlOptions['class'] . ' way2blogging-cssanime';
+		}
+		$this->defaultUlHtmlOptions['class'] = $this->defaultUlHtmlOptions['class'] . " way2blogging-size{$this->iconSize}";
+		
 		$this->ulHtmlOptions = array_merge($this->defaultUlHtmlOptions, $this->ulHtmlOptions);
-		Yii::app()->clientScript->registerCss('sharebox-image-size-rss', 'ul.' . $this->ulHtmlOptions['class'] . " li a {width:{$this->iconSize}px; height:{$this->iconSize}px;}"
-		);
 	}
 
 	public function run()
