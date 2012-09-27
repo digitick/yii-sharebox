@@ -13,6 +13,7 @@
  * @copyright © Digitick <www.digitick.net> 2011-2012
  * @license Public Domain
  * @author Ianaré Sévi
+ * @author Vincent Castelain
  *
  * Note: the company logos in the icons are copyright of their respective owners.
  */
@@ -31,7 +32,7 @@ class EShareBox extends CWidget
 	 */
 	public $title;
 	/**
-	 * @var boolean whether to animate the links. 
+	 * @var boolean whether to animate the links.
 	 */
 	public $animate = true;
 	/**
@@ -152,7 +153,7 @@ class EShareBox extends CWidget
 			$this->defaultUlHtmlOptions['class'] = $this->defaultUlHtmlOptions['class'] . ' way2blogging-cssanime';
 		}
 		$this->defaultUlHtmlOptions['class'] = $this->defaultUlHtmlOptions['class'] . " way2blogging-size{$this->iconSize}";
-		
+
 		$this->ulHtmlOptions = array_merge($this->defaultUlHtmlOptions, $this->ulHtmlOptions);
 	}
 

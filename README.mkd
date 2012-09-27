@@ -33,6 +33,10 @@ $this->widget('ext.sharebox.EShareBox', array(
     // Default is 24px, available sizes : 16, 24, 32, 48.
     //'iconSize' => 32,
 
+    // Whether to animate the links.
+    // Default is true
+    //'animate' => false,
+
    // Social networks to include, excluding all others.
    // The exclude filter is still run.
    //'include' => array('technorati', 'digg'),
@@ -41,9 +45,9 @@ $this->widget('ext.sharebox.EShareBox', array(
    // By default none are excluded.
    //'exclude' => array('technorati', 'digg'),
 
-   // Use your own icons ! Note that you will need to have
+   // Use your own icons! Note that you will need to have
    // a subfolder of the appropriate icons sizes.
-   // ie : /myimages/social/16px /myimages/social/24px ...
+   // ie: /myimages/social/16px /myimages/social/24px ...
    //'iconPath' => '/myimages/social',
 
    // HTML options for the UL element.
@@ -71,6 +75,10 @@ Note: the company logos in the icons are copyright of their respective owners.
 * [Extension Page](http://www.yiiframework.com/extension/sharebox)
 
 ##Change Log
+
+* v 1.3 — 2012-09-27 :
+  * Add the animate option.
+  * CSS fixes and cleanup.
 
 * v 1.2.2 — 2011-09-27 :
   * Fix XHTML validation errors : url formating and CSS (thanks to Leffe for the CSS improvements).
